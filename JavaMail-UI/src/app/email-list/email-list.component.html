@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>{{messages.label_mail_list_title}}</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th style="width: 25%;">{{messages.email_sender}}</th>
+        <th style="width: 25%;">{{messages.email_subject}}</th>
+        <th>{{messages.email_body}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let email of emails | async" class="code-{{email.code}}">
+        <td>{{email.sender}}</td>
+        <td>{{email.subject}}</td>
+        <td>{{email.body}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="panel-footer">
+    <button class="btn btn-primary" (click)="reloadData()" >{{messages.btn_label_refresh}}</button>
+  </div>
+</div>
+

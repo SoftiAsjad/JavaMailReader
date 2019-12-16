@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <button (click)="handleClick($event)" type="button" lang="et" id="et"
+          class="language btn btn-primary flag-icon-background flag-icon-ee" ></button>
+  <button (click)="handleClick($event)" type="button" lang="en" id="en"
+          class="language btn btn-primary flag-icon-background flag-icon-gb"></button>
+  <button (click)="handleClick($event)" type="button" lang="fr" id="fr"
+          class="language btn btn-primary flag-icon-background flag-icon-fr"></button>
+</nav>
+
+<div class="container">
+  <br>
+  <h2 style="text-align: center;"></h2>
+  <hr>
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
